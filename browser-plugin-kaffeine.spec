@@ -46,7 +46,8 @@ Obs³ugiwane przegl±darki: %{browsers}.
 %{__autoconf}
 %{__automake}
 %configure \
-	--prefix=%{_plugindir}
+	--prefix=%{_plugindir} \
+	--disable-static
 %{__make}
 
 %install
@@ -55,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_plugindir}/kaffeineplugin.{a,la}
+rm -f $RPM_BUILD_ROOT%{_plugindir}/kaffeineplugin.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
