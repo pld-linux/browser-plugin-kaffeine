@@ -17,7 +17,6 @@ BuildRequires:	xorg-lib-libSM-devel
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXt-devel
 Requires:	browser-plugins(%{_target_base_arch})
-Conflicts:	mplayerplug-in
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # directory where you store the plugin
@@ -33,7 +32,8 @@ This package delivers a video/audio player plugin for web browsers.
 Supported browsers: %{browsers}.
 
 %description -l pl
-Ta paczka dostarcza wtyczki odtwarzacza wideo/audio dla przegl±darek internetowych.
+Ta paczka dostarcza wtyczki odtwarzacza wideo/audio dla przegl±darek
+internetowych.
 
 Obs³ugiwane przegl±darki: %{browsers}.
 
