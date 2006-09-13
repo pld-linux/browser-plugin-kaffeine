@@ -11,6 +11,9 @@ Source0:	http://dl.sourceforge.net/kaffeine/%{_realname}-%{version}.tar.bz2
 # Source0-md5:	c7bb24cbd20fdfeffbb0da452533cac4
 Patch0:		%{name}-destdir.patch
 URL:		http://kaffeine.sourceforge.net
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.236
 BuildRequires:	xorg-lib-libICE-devel
 BuildRequires:	xorg-lib-libSM-devel
@@ -22,7 +25,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 # directory where you store the plugin
 %define		_plugindir	%{_libdir}/browser-plugins
 
-# TODO: galeon and skipstone.
 # use macro, otherwise extra LF inserted along with the ifarch
 %define	browsers mozilla, mozilla-firefox, konqueror, opera, seamonkey
 
@@ -47,7 +49,7 @@ Obs³ugiwane przegl±darki: %{browsers}.
 %{__autoconf}
 %{__automake}
 %configure \
-	--prefix=%{_libdir}/browser-plugins
+	--prefix=%{_plugindir}
 %{__make}
 
 %install
@@ -55,6 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT%{_plugindir}/kaffeineplugin.{a,la}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
