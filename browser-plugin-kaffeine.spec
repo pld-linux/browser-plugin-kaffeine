@@ -89,11 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 %triggerun -- seamonkey
 %nsplugin_uninstall -d %{_libdir}/seamonkey/plugins %{_pluginname}.so
 
-# as rpm removes the old obsoleted package files after the triggers
-# are ran, add another trigger to make the links there.
-%triggerpostun -- mozilla-firefox-plugin-macromedia-flash
-%nsplugin_install -f -d %{_libdir}/mozilla-firefox/plugins libflashplayer.so flashplayer.xpt
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
