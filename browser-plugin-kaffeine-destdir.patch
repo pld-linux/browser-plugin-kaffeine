@@ -1,0 +1,11 @@
+--- src/Makefile.am.orig	2004-05-13 00:57:43.000000000 +0200
++++ src/Makefile.am	2006-09-13 17:11:13.000000000 +0200
+@@ -6,7 +6,7 @@
+ 
+ lib_LTLIBRARIES = kaffeineplugin.la
+ 
+-libdir = $(prefix)/plugins
++libdir = $(prefix)
+ 
+ kaffeineplugin_la_SOURCES = plugin.c npunix.c
+ kaffeineplugin_la_LDFLAGS = -avoid-version -module
