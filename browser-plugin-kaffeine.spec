@@ -11,14 +11,11 @@ Source0:	http://dl.sourceforge.net/kaffeine/%{_realname}-%{version}.tar.bz2
 # Source0-md5:	c7bb24cbd20fdfeffbb0da452533cac4
 Patch0:		%{name}-destdir.patch
 URL:		http://kaffeine.sourceforge.net
+BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.236
-BuildRequires:	xorg-lib-libICE-devel
-BuildRequires:	xorg-lib-libSM-devel
-BuildRequires:	xorg-lib-libXaw-devel
-BuildRequires:	xorg-lib-libXt-devel
 Requires:	browser-plugins(%{_target_base_arch})
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
