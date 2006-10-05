@@ -10,7 +10,7 @@ Group:		X11/Applications/Multimedia
 Source0:	http://dl.sourceforge.net/kaffeine/%{_realname}-%{version}.tar.bz2
 # Source0-md5:	c7bb24cbd20fdfeffbb0da452533cac4
 Patch0:		%{name}-destdir.patch
-URL:		http://kaffeine.sourceforge.net
+URL:		http://kaffeine.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -49,6 +49,7 @@ Obs³ugiwane przegl±darki: %{browsers}.
 %{__autoconf}
 %{__automake}
 %configure \
+	--disable-static \
 	--prefix=%{_plugindir}
 %{__make}
 
@@ -58,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_plugindir}/kaffeineplugin.{a,la}
+rm -f $RPM_BUILD_ROOT%{_plugindir}/kaffeineplugin.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
