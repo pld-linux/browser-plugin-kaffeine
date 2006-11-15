@@ -4,7 +4,7 @@ Summary:	Kaffeine player for webbrowsers
 Summary(pl):	Odtwarzacz Kaffeine dla przegl±darek internetowych
 Name:		browser-plugin-kaffeine
 Version:	0.2
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://dl.sourceforge.net/kaffeine/%{_realname}-%{version}.tar.bz2
@@ -26,7 +26,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_plugindir	%{_libdir}/browser-plugins
 
 # use macro, otherwise extra LF inserted along with the ifarch
-%define	browsers mozilla, mozilla-firefox, konqueror, opera, seamonkey
+%define	browsers mozilla, mozilla-firefox, mozilla-firefox-bin, konqueror, opera, seamonkey
 
 %description
 This package delivers a video/audio player plugin for web browsers.
@@ -69,6 +69,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %triggerun -- mozilla-firefox
 %nsplugin_uninstall -d %{_libdir}/mozilla-firefox/plugins %{_pluginname}.so
+
+%triggerin -- mozilla-firefox-bin
+%nsplugin_install -d %{_libdir}/mozilla-firefox-bin/plugins %{_pluginname}.so
+
+%triggerun -- mozilla-firefox-bin
+%nsplugin_uninstall -d %{_libdir}/mozilla-firefox-bin/plugins %{_pluginname}.so
 
 %triggerin -- mozilla
 %nsplugin_install -d %{_libdir}/mozilla/plugins %{_pluginname}.so
