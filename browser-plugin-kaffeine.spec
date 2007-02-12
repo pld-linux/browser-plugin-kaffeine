@@ -1,7 +1,7 @@
 %define		_realname	kaffeine-mozilla
 %define		_pluginname	kaffeineplugin
 Summary:	Kaffeine player for webbrowsers
-Summary(pl):	Odtwarzacz Kaffeine dla przegl±darek internetowych
+Summary(pl.UTF-8):   Odtwarzacz Kaffeine dla przeglÄ…darek internetowych
 Name:		browser-plugin-kaffeine
 Version:	0.2
 Release:	0.2
@@ -33,11 +33,11 @@ This package delivers a video/audio player plugin for web browsers.
 
 Supported browsers: %{browsers}.
 
-%description -l pl
-Ta paczka dostarcza wtyczki odtwarzacza wideo/audio dla przegl±darek
+%description -l pl.UTF-8
+Ta paczka dostarcza wtyczki odtwarzacza wideo/audio dla przeglÄ…darek
 internetowych.
 
-Obs³ugiwane przegl±darki: %{browsers}.
+ObsÅ‚ugiwane przeglÄ…darki: %{browsers}.
 
 %prep
 %setup -q -n %{_realname}-%{version}
