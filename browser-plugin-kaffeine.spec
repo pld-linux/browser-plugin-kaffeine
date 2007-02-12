@@ -1,7 +1,7 @@
 %define		_realname	kaffeine-mozilla
 %define		_pluginname	kaffeineplugin
 Summary:	Kaffeine player for webbrowsers
-Summary(pl.UTF-8):   Odtwarzacz Kaffeine dla przeglądarek internetowych
+Summary(pl.UTF-8):	Odtwarzacz Kaffeine dla przeglądarek internetowych
 Name:		browser-plugin-kaffeine
 Version:	0.2
 Release:	0.2
