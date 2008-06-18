@@ -20,6 +20,7 @@ BuildRequires:	xorg-lib-libSM-devel
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXt-devel
 Requires:	browser-plugins >= 2.0
+Requires:	kaffeine
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
