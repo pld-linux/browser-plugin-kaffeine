@@ -4,7 +4,7 @@ Summary:	Kaffeine player for webbrowsers
 Summary(pl.UTF-8):	Odtwarzacz Kaffeine dla przeglądarek internetowych
 Name:		browser-plugin-kaffeine
 Version:	0.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://dl.sourceforge.net/kaffeine/%{_realname}-%{version}.tar.bz2
